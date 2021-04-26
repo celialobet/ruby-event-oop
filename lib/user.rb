@@ -12,4 +12,11 @@ class User
     return @@all_users
   end
 
+  # def self.find_by_email(email)
+  #   @@all_users.each do |i|
+  #   if @email == i
+  #     return i
+  #   end
+  # end
+
 end
