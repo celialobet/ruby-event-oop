@@ -1,3 +1,4 @@
+require "pry"
 class User
   attr_accessor :email, :age
   @@all_users = Array.new
@@ -12,11 +13,15 @@ class User
     return @@all_users
   end
 
-  # def self.find_by_email(email)
-  #   @@all_users.each do |i|
-  #   if @email == i
-  #     return i
-  #   end
-  # end
+  def self.find_by_email(email)
+    @@all_users.each do |user|
+      if email == user.email
+        return user
+      end
+    end
+  end
 
 end
+
+binding.pry
+puts "end of file"
